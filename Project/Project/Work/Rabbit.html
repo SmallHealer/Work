@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>敏感的兔子</title>
+		<style type="text/css">
+			img{
+				width: 400px;
+				height: 400px;
+			}
+			#main{
+				margin: 0 auto;
+				width: 400px;
+				height: 400px;
+				position: relative;
+			}
+			.box{
+				width: 180px;
+				height: 180px;
+				opacity: 0.2;
+				background: aqua;position: absolute;
+			}
+			#box1{left: 20px;top: 10px;}
+			#box2{left: 200px;top: 10px;}
+			#box3{left: 20px;top: 200px;}
+			#box4{left: 200px;top: 200px;}
+		</style>
+		<script>
+			function fun(e){
+				alert(e.keyCode);
+			}
+		</script>
+	</head>
+	<body onkeypress="fun(event)">
+		<div id = "main">
+			<img src="../img/20.png"/>
+			<div id="box1" class="box" onmouseenter="alert('离我远点')">鼠标进入</div>
+			<div id="box2" class="box" onmouseover="alert('不要摸我!')">鼠标悬浮</div>
+			<div id="box3" class="box" onclick="alert('谁打我？')">鼠标单击</div>
+			<div id="box4" class="box" ondblclick="alert('谁打我两下？')">鼠标双击</div>
+		</div>
+	</body>
+</html>
