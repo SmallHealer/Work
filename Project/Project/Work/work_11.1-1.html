@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>对注册页面进行验证</title>
+	</head>
+	<body>
+		<form>
+			<div>
+				<span>输入密码：</span>
+				<input type="password" placeholder="输入密码" id="pwd"/>
+				<p></p>
+				<span>确认密码：</span>
+				<input type="password" placeholder="确认密码" id="repwd"/>
+				<p></p>
+				<input type="submit" value="保存" id="make"/>
+			</div>
+		</form>
+	</body>
+	<script>
+		var make = document.getElementById("make");
+		make.onclick = function sure(){
+			var pwd = document.getElementById("pwd").value;
+			var repwd = document.getElementById("repwd").value;
+			if(pwd == "" || pwd == null ){
+				alert("密码不能为空！");
+			}else if(pwd != "" || pwd != null ){
+				if(repwd == "" || repwd == null ){
+					alert("请再次输入密码");
+				}else if(repwd != "" || repwd != null){
+					if(pwd.length < 6||repwd.length <6){
+						alert("输入的密码长度不符合要求");
+					}else if(pwd != repwd){
+						alert("两次输入的密码不一致");
+					}else{
+						alert("保存成功")
+					}
+			}
+			}
+			
+		}
+					
+		
+	</script>
+</html>

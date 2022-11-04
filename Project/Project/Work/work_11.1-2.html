@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>复制按钮</title>
+	</head>
+	<body>
+		<span>请输入：</span>
+		<input type="text" id="date" placeholder="请输入"/>
+		<button onclick="copydate()">复制</button>
+		<input type="text" id="copy"/>	
+		<p id= "look"></p>
+	</body>
+	<script>
+		function copydate(){
+			var first = document.getElementById("date").value;	
+			document.getElementById("copy").value = first;
+			var two = document.getElementById("copy").value
+			if(two == first){
+				document.getElementById("look").innerHTML = "已成功复制"
+			}
+			
+		}
+	</script>
+</html>
