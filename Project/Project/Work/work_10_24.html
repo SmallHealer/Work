@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>主页面</title>
+		<style>
+	a:hover{
+		cursor: pointer;
+		background: aqua;
+	}
+		</style>
+	</head>
+	<script>
+		function Login(){
+		myWindow=window.open('./login.html','','width=400,height=400');
+		myWindow.focus();
+		}
+		function Register(){
+		myWindow=window.open('./register.html','','width=400,height=400');
+		myWindow.focus();
+		}
+	</script>
+	<body>
+		<a src="" onclick="Register()">注册</a>
+		<span>|</span>
+		<a onclick="Login()">登录</a>
+		<p>这是主页面</p>
+	</body>
+</html>
